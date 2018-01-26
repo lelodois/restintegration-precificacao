@@ -4,29 +4,26 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Precificacao {
+public class PrecificacaoLote {
 
 	@JsonProperty(required = true)
-	private BigDecimal valor;
+	private Integer filialInicial;
+
+	@JsonProperty(required = true)
+	private Integer filialFinal;
 
 	@JsonProperty(required = true)
 	private Long produto;
 
 	@JsonProperty(required = true)
-	private Long filial;
+	private BigDecimal valor;
 
-	public Precificacao() {
-
+	public Integer getFilialInicial() {
+		return filialInicial;
 	}
 
-	public Precificacao(PrecificacaoLote precificacaoLote, int filial) {
-		this.valor = precificacaoLote.getValor();
-		this.produto = precificacaoLote.getProduto();
-		this.filial = new Long(filial);
-	}
-
-	public Long getFilial() {
-		return filial;
+	public Integer getFilialFinal() {
+		return filialFinal;
 	}
 
 	public Long getProduto() {
@@ -37,8 +34,12 @@ public class Precificacao {
 		return valor;
 	}
 
-	public void setFilial(Long filial) {
-		this.filial = filial;
+	public void setFilialInicial(Integer filialInicial) {
+		this.filialInicial = filialInicial;
+	}
+
+	public void setFilialFinal(Integer filialFinal) {
+		this.filialFinal = filialFinal;
 	}
 
 	public void setProduto(Long produto) {
