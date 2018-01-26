@@ -11,7 +11,7 @@ Run PrecificacaoApplication.java http://localhost:9081/swagger-ui.html
 * Maven
 * Spring boot / Mvc / Event
 * Tomcat embedded
+* CouchDB
 * Hibernate
 * Swagger
-* H2
 * Fluent Http
